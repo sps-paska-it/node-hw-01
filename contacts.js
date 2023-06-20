@@ -22,7 +22,7 @@ const removeContact = async (contactId) => {
   return deleteContact;
 };
 
-const addContact = async (name, email, phone) => {
+const addContact = async ({name, email, phone}) => {
   const contacts = await listContacts();
   const id = nanoid();
   contacts.push({ id, name, email, phone });
